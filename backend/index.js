@@ -34,7 +34,6 @@ app.get("/todos", async function(req, res) {
     })
 
 })
-
 app.put("/completed", async function(req, res) {
     const updatePayload = req.body;
     const parsedPayload = updateTodo.safeParse(updatePayload);
@@ -52,6 +51,6 @@ app.put("/completed", async function(req, res) {
     res.json({
         msg: "Todo marked as completed"
     })
-})
+});
 
 app.listen(3000);
